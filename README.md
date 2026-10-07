@@ -46,5 +46,5 @@ Une ligne par séance. L'historique Git dit *qui* a fait *quoi* ; le journal dit
 
 | Séance | Ce qu'on a fait                                                       | Ce qui bloque |
 |--------|-----------------------------------------------------------------------|---------------|
-| 1      | thème, activités (on réfléhit on encore à d'autres), moodboard.          on cherche le nom du blog
+| 1      | thème, activités (on réfléhit on encore à d'autres), moodboard.       | on cherche le nom du blog
                         
