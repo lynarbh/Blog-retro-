@@ -44,8 +44,7 @@ assets/             images, sons, vidéos
 
 Une ligne par séance. L'historique Git dit *qui* a fait *quoi* ; le journal dit *pourquoi*, et où vous en êtes.
 
-| Séance | Ce qu'on a fait             | Ce qui bloque |
-|--------|-----------------------------|---------------|
-| 1      | thème, activités (on          on cherche le 
-           réfléhit on encore à          nom du blog
-           d'autres), moodboard.              
+| Séance | Ce qu'on a fait                                                       | Ce qui bloque |
+|--------|-----------------------------------------------------------------------|---------------|
+| 1      | thème, activités (on réfléhit on encore à d'autres), moodboard.          on cherche le nom du blog
+                        
