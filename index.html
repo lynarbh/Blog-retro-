@@ -3,18 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nom du festival</title>
+  <title>Blog rétro</title>
+  <!-- police pixel (Google Fonts) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Nom du festival</h1>
-  </header>
+  <div class="page">
 
-  <main>
-    <h2>Programme</h2>
-    <ul id="programme"></ul>
-  </main>
+    <header class="entete">
+      <h1>~ Blog rétro ~</h1>
+      <p>bienvenue dans les années 2000 ♡</p>
+    </header>
+
+    <main class="grille">
+
+      <!-- 1. Musique -->
+      <section class="case musique">
+        <h2>♫ Musique</h2>
+        <p>(lecteur à venir)</p>
+      </section>
+
+      <!-- 2. Habillage (la plus grande case) -->
+      <section class="case avatar">
+        <h2>★ Habille ton avatar</h2>
+        <p>(avatar + accessoires à venir)</p>
+      </section>
+
+      <!-- 3. Dessin -->
+      <section class="case dessin">
+        <h2>✎ Dessine</h2>
+        <p>(zone de dessin à venir)</p>
+      </section>
+
+      <!-- 4. Jeux -->
+      <section class="case jeux">
+        <h2>♥ Jeux</h2>
+        <p>(carrousel à venir)</p>
+      </section>
+
+      <!-- 5. Films (colonne sur le côté) -->
+      <aside class="case films">
+        <h2>✿ Films à voir</h2>
+        <ul id="programme"></ul>
+      </aside>
+
+    </main>
+
+  </div>
 
   <script src="js/Evenement.js"></script>
   <script src="data/evenements.js"></script>

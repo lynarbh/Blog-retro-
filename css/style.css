@@ -1,22 +1,159 @@
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
+/* =========================================
+   Blog rétro — style y2k / fenêtres Windows roses
+   Mobile first : d'abord le téléphone,
+   puis on change la grille sur grand écran.
+   ========================================= */
+
+/* ---------- Couleurs (à changer ici facilement) ---------- */
+:root {
+  --rose-clair: #ffe4f2;
+  --rose: #ff8fc7;
+  --rose-fonce: #e0459b;
+  --blanc: #ffffff;
+  --texte: #5a2a4a;
 }
 
-header,
-main {
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "VT323", monospace;   /* police pixel */
+  font-size: 1.2rem;
+  color: var(--texte);
+  /* image de fond derrière tout le site */
+  /* 500px de large, répétée en mosaïque (changer 500px pour zoomer/dézoomer) */
+  background: url("../assets/fond-fleurs.jpg") top left / 500px repeat fixed;
+  min-height: 100vh;
+}
+
+/* Le site au centre, avec des marges à gauche et à droite */
+.page {
   max-width: 70rem;
   margin: 0 auto;
   padding: 1rem;
 }
 
+/* =========================================
+   LE STYLE "FENÊTRE" (en-tête + toutes les cases)
+   ========================================= */
+.entete,
+.case {
+  background: var(--rose-clair);
+  border: 2px solid var(--rose-fonce);
+  /* ombre dure sans flou = effet pixel */
+  box-shadow: 4px 4px 0 var(--rose-fonce);
+  padding: 1rem;
+}
+
+/* La barre de titre rose en haut de chaque fenêtre */
+.entete h1,
+.case h2 {
+  margin: -1rem -1rem 1rem;    /* colle la barre aux bords */
+  padding: 0.2rem 0.5rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: var(--blanc);
+  background: linear-gradient(to right, var(--rose-fonce), var(--rose));
+  border-bottom: 2px solid var(--rose-fonce);
+}
+
+/* Les 3 boutons _ □ X à droite de la barre */
+.entete h1::after,
+.case h2::after {
+  content: "_ □ X";
+  float: right;
+  background: var(--blanc);
+  color: var(--texte);
+  border: 2px solid var(--rose-fonce);
+  padding: 0 0.3rem;
+  font-size: 1.1rem;
+}
+
+/* ---------- En-tête ---------- */
+.entete {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.entete h1 {
+  text-align: left;
+}
+
+.entete p {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--rose-fonce);
+}
+
+/* ---------- La grille ---------- */
+/* Sur téléphone : une seule colonne */
+.grille {
+  display: grid;
+  gap: 1.2rem;
+}
+
+/* ---------- Images de fond dans certaines cases ---------- */
+.avatar {
+  background: url("../assets/fond-bulles.jpg") center / cover;
+}
+
+.musique,
+.films {
+  background: url("../assets/fond-pois-dentelle.jpg") center / cover;
+}
+
+/* Le texte "à venir" dans une petite boîte blanche pour rester lisible */
+.case p {
+  display: inline-block;
+  background: var(--blanc);
+  border: 2px solid var(--rose);
+  padding: 0.2rem 0.5rem;
+  margin: 0;
+}
+
+/* ---------- Liste des films (générée par le JS) ---------- */
 #programme {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: grid;
   gap: 1rem;
 }
 
 .carte {
+  background: var(--blanc);
+  border: 2px solid var(--rose-fonce);
+  box-shadow: 3px 3px 0 var(--rose);
+  padding: 0.5rem;
+}
 
+.carte h3 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.carte img {
+  width: 100%;
+}
+
+/* ---------- Grand écran (ordinateur) ---------- */
+@media (min-width: 900px) {
+  .grille {
+    /* 3 colonnes : petite | grande | films */
+    grid-template-columns: 1fr 2fr 1fr;
+    /* on "dessine" où va chaque case */
+    grid-template-areas:
+      "musique avatar films"
+      "dessin  avatar films"
+      "jeux    jeux   films";
+  }
+
+  .musique { grid-area: musique; }
+  .avatar  { grid-area: avatar; min-height: 30rem; }
+  .dessin  { grid-area: dessin; }
+  .jeux    { grid-area: jeux; }
+  .films   { grid-area: films; }
 }
