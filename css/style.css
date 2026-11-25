@@ -114,6 +114,36 @@ body {
   margin: 0;
 }
 
+/* ---------- Boutons filtres des films ---------- */
+.filtres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+/* bouton style Windows : gris rose avec bordure "en relief" */
+.filtres button {
+  font-family: inherit;
+  font-size: 1.1rem;
+  color: var(--texte);
+  background: var(--blanc);
+  border: 2px outset var(--rose);
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+}
+
+.filtres button:hover {
+  background: var(--rose-clair);
+}
+
+/* le bouton allumé (classe ajoutée par le JS) */
+.filtres button.actif {
+  background: var(--rose-fonce);
+  color: var(--blanc);
+  border-style: inset;
+}
+
 /* ---------- Liste des films (générée par le JS) ---------- */
 #programme {
   list-style: none;
@@ -133,6 +163,16 @@ body {
 .carte h3 {
   margin: 0;
   font-weight: normal;
+  color: var(--rose-fonce);
+}
+
+/* on enlève la petite boîte blanche des "p" de .case */
+.carte p {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
 }
 
 .carte img {

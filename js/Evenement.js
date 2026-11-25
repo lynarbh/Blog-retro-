@@ -1,28 +1,27 @@
+// Un "événement" de notre blog = un film recommandé
 class Evenement {
-  constructor(titre, image, réalisateur, durée, note, synopsis) {
-    this.titre = titre
-    this.image = image
-    this.réalisateur = réalisateur
-    this.durée
+  constructor(titre, realisateur, annee, duree, genre) {
+    this.titre = titre;
+    this.realisateur = realisateur;
+    this.annee = annee;
+    this.duree = duree; // en minutes
+    this.genre = genre; // "comedie", "romance" ou "animation" (sert au filtre)
   }
 
-  heureFin() {
-    const heures = Number(this..slice(0, 2));
-    const minutes = Number(this..slice(3, 5));
-    const total = heures * 60 + minutes + this.;
-
-    let h = Math.floor(total / 60) % 24;
-    let m = total % 60;
-    if (h < 10) h = "0" + h;
+  // Transforme 97 minutes en "1h37"
+  dureeTexte() {
+    const h = Math.floor(this.duree / 60);
+    let m = this.duree % 60;
     if (m < 10) m = "0" + m;
-
-    return h + ":" + m;
+    return h + "h" + m;
   }
 
+  // Le HTML d'une carte film
   carte() {
     return `
       <li class="carte">
-        <h3>${}</h3>
+        <h3>${this.titre}</h3>
+        <p>${this.realisateur} · ${this.annee} · ${this.dureeTexte()}</p>
       </li>`;
   }
 }
