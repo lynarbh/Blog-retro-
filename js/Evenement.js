@@ -1,5 +1,9 @@
 class Evenement {
-  constructor() {
+  constructor(titre, image, réalisateur, durée, note, synopsis) {
+    this.titre = titre
+    this.image = image
+    this.réalisateur = réalisateur
+    this.durée
   }
 
   heureFin() {
