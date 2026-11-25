@@ -7,6 +7,7 @@ const programme = [
   new Evenement("Le Diable s'habille en Prada", "David Frankel", 2006, 109, "comedie", "film"),
   new Evenement("Princesse malgré elle", "Garry Marshall", 2001, 115, "comedie", "film"),
   new Evenement("Gossip Girl", "Josh Schwartz et Stephanie Savage", 2007, 42, "comedie", "serie"),
+  new Evenement("Desperate Housewives", "Marc Cherry", 2004, 43, "comedie", "serie"),
   new Evenement("Dracula", "Luc Besson", 2025, 129, "romance", "film"),
   new Evenement("The Notebook", "Nick Cassavetes", 2004, 123, "romance", "film"),
   new Evenement("Notting Hill", "Roger Michell", 1999, 124, "romance", "film"),
