@@ -4,7 +4,7 @@
    puis on change la grille sur grand écran.
    ========================================= */
 
-/* ---------- Couleurs (à changer ici facilement) ---------- */
+/* Couleurs (à changer ici facilement) */
 :root {
   --rose-clair: #ffe4f2;
   --rose: #ff8fc7;
@@ -13,7 +13,7 @@
   --texte: #5a2a4a;
 }
 
-/* ---------- Base ---------- */
+/* Base */
 * {
   box-sizing: border-box;
 }
