@@ -19,6 +19,8 @@ const tout = document.querySelector("#tout");
 const comedie = document.querySelector("#comedie");
 const romance = document.querySelector("#romance");
 const animation = document.querySelector("#animation");
+const films = document.querySelector("#films");
+const series = document.querySelector("#series");
 
 tout.addEventListener("click", () => {
   afficher(programme);
@@ -38,6 +40,16 @@ romance.addEventListener("click", () => {
 animation.addEventListener("click", () => {
   afficher(programme.filter((ev) => ev.genre === "animation"));
   activer(animation);
+});
+
+films.addEventListener("click", () => {
+  afficher(programme.filter((ev) => ev.type === "film"));
+  activer(films);
+});
+
+series.addEventListener("click", () => {
+  afficher(programme.filter((ev) => ev.type === "serie"));
+  activer(series);
 });
 
 // ---------- Au chargement : on montre tous les films ----------

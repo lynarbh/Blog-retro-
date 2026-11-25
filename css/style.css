@@ -166,6 +166,15 @@ body {
   color: var(--rose-fonce);
 }
 
+/* petite étiquette "film" ou "serie" */
+.carte .type {
+  float: right;
+  font-size: 0.9rem;
+  color: var(--blanc);
+  background: var(--rose);
+  padding: 0 0.3rem;
+}
+
 /* on enlève la petite boîte blanche des "p" de .case */
 .carte p {
   display: block;
