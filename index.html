@@ -56,6 +56,23 @@
           <button id="series" aria-pressed="false">Séries</button>
         </div>
 
+        <!-- Recherche : le label est relié au champ par for et id -->
+        <div class="recherche-tri">
+          <label for="recherche">Rechercher un film ou une série</label>
+          <input type="search" id="recherche">
+
+          <!-- Le menu de tri : value est ce que lit le JavaScript -->
+          <label for="tri">Trier</label>
+          <select id="tri">
+            <option value="">Choisir un ordre</option>
+            <option value="nom">Par nom</option>
+            <option value="duree">Par durée</option>
+          </select>
+        </div>
+
+        <!-- aria-live : le lecteur d'écran annonce chaque changement -->
+        <p id="compteur" aria-live="polite"></p>
+
         <ul id="programme"></ul>
       </aside>
 

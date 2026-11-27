@@ -144,6 +144,44 @@ body {
   border-style: inset;
 }
 
+/* ---------- Recherche et tri ---------- */
+.recherche-tri {
+  display: grid;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.recherche-tri label {
+  color: var(--rose-fonce);
+}
+
+/* champ et menu style Windows : bordure "creusée" */
+.recherche-tri input,
+.recherche-tri select {
+  font-family: inherit;
+  font-size: 1.1rem;
+  color: var(--texte);
+  background: var(--blanc);
+  border: 2px inset var(--rose);
+  padding: 0.2rem 0.4rem;
+}
+
+/* contour bien visible quand on est dans le champ (clavier) */
+.recherche-tri input:focus,
+.recherche-tri select:focus {
+  outline: 2px solid var(--rose-fonce);
+}
+
+/* le compteur : pas de petite boîte blanche, juste le texte */
+#compteur {
+  display: block;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0 0 0.5rem;
+  color: var(--rose-fonce);
+}
+
 /* ---------- Liste des films (générée par le JS) ---------- */
 #programme {
   list-style: none;
